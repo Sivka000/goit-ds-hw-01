@@ -1,0 +1,8 @@
+FROM python:3.13
+WORKDIR /app
+RUN pip install --upgrade pip && pip install poetry
+COPY pyproject.toml ./
+RUN poetry install --no-root
+COPY ./src/assist ./assist
+WORKDIR /app/assist
+CMD ["poetry", "run", "python", "main.py"]
