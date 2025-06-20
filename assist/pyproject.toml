@@ -1,0 +1,19 @@
+[project]
+name = "assist"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Sivka000",email = "stepchynv@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[tool.poetry]
+packages = [{include = "assist", from = "assist/src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
